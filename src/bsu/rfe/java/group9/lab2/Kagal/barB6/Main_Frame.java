@@ -106,6 +106,7 @@ public class Main_Frame  extends JFrame
 		
 		setLocation((kit.getScreenSize().width - WIDTH)/2,
 				(kit.getScreenSize().height - HEIGHT)/2);
+		
 		hboxFormulaType.add(Box.createHorizontalGlue());
 		
 		addRadioButton("Формула 1", 1);
@@ -160,7 +161,7 @@ public class Main_Frame  extends JFrame
 		hboxResult.add(Box.createHorizontalGlue());
 		hboxResult.setBorder(BorderFactory.createLineBorder(Color.BLUE));
 		
-		JButton buttonCalc = new JButton ("Вычислить");
+		JButton buttonCalc = new JButton ("НАЙТИ");
 		
 		buttonCalc.addActionListener(new ActionListener()
 		{
@@ -209,7 +210,7 @@ public class Main_Frame  extends JFrame
 		hboxButtons.add(Box.createHorizontalStrut(30));
 		hboxButtons.add(buttonReset); // RESET BUTTON
 		hboxButtons.add(Box.createHorizontalGlue());
-		hboxButtons.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+		hboxButtons.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
 		
 		
 		hBoxMemoryType.add(Box.createHorizontalGlue());
@@ -248,7 +249,6 @@ public class Main_Frame  extends JFrame
 		JButton buttonMp = new JButton("M+");
 		buttonMp.addActionListener(new ActionListener()
 		{
-
 			@Override
 			public void actionPerformed(ActionEvent arg0)
 			{
@@ -282,8 +282,10 @@ public class Main_Frame  extends JFrame
 		contentBox.add(hboxFormulaType);
 		contentBox.add(hboxVariables);
 		contentBox.add(hboxResult);
+		
 		contentBox.add(hboxButtons);
 		contentBox.add(hBoxMemoryType); 
+		
 		contentBox.add(hBoxControlButtons);
 		contentBox.add(hBoxMemoryField); 
 		contentBox.add(Box.createVerticalGlue());
